@@ -1,4 +1,1 @@
-<div>
-    title: {{ $project->title }}
-    description: {!! $project->description !!}
-</div>
+<x-projects.card :$project />

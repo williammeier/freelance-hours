@@ -3,6 +3,7 @@
 namespace App\Livewire\Projects;
 
 use App\Models\Project;
+use App\Models\Proposal;
 use Livewire\Component;
 
 class Proposals extends Component
