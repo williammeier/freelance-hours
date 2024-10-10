@@ -36,8 +36,9 @@ class NewProposal extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
+            ->subject('Você recebeu uma nova proposta')
             ->line('Você recebeu uma nova proposta.')
-            ->action('Veja o seu projeto', route('project.show', $this->project->id))
+            ->action('Veja o seu projeto', route('projects.show', $this->project->id))
             ->line('Obrigado!');
     }
 

@@ -36,6 +36,7 @@ class BetterProposal extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
+            ->subject('Sua proposta foi superada')
             ->line('Você perdeu posição no projeto: ' . $this->project->title)
             ->action('Abra o projeto', route('projects.show', $this->project->id))
             ->line('Obrigado!');

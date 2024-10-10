@@ -41,7 +41,7 @@ class Create extends Component
             $this->arrangePositions($proposal);
         });
 
-        $this->project->author(new NewProposal($this->project));
+        $this->project->author->notify(new NewProposal($this->project));
 
         $this->dispatch('proposal::created');
         $this->modal = false;
